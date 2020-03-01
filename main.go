@@ -35,12 +35,10 @@ func main() {
 
 		err2 := v.RegisterValidation("topics", func(fl validator.FieldLevel) bool {
 
-
 			topics, ok := fl.Top().Interface().(*Topics)
 
-
 			if ok && topics.TopicListSize == len(topics.TopicList) {
-				return  true
+				return true
 
 			}
 			return false
